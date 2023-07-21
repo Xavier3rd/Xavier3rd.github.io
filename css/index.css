@@ -1,0 +1,262 @@
+* {
+    margin: 0; 
+    padding: 0;   
+}
+
+[class*="col-"] {
+    float: left;   
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*ESTILO PARA EL HEADER*/
+header {
+    display: flex;
+}
+
+.col-7 {
+    display: grid;
+    align-items: center;
+}
+
+#logoClinica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    justify-self: center;
+    width: 16rem;
+}
+
+
+/*ESTILO DEL H2*/
+
+h2 {
+    padding: 3rem;
+    text-align: center;
+
+}
+
+/*ESTILO PARA EL CAROUSEL*/
+
+.c-item {
+    width: 480px;
+}
+
+.c-img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 70vh;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* ESTILO DE LAS TARJETAS INFORMATIVAS*/
+
+[class*="menu-"] {    
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+    border: solid grey;
+    border-radius: 20px;
+    width: 30vw;
+}
+
+.gridContainer {  
+    display: grid;
+    margin: 2rem ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "menu-1 menu-2 menu-3"
+      "menu-4 menu-5 menu-6";
+}
+
+.menu-1 {
+    grid-area: menu-1;
+}
+
+.menu-2 {
+    grid-area: menu-2;
+}
+
+.menu-3 {
+    grid-area: menu-3;
+}
+
+.menu-4 {
+    grid-area: menu-4;
+}
+
+.menu-5 {
+    grid-area: menu-5;
+}
+
+.menu-6 {
+    grid-area: menu-6;
+}
+
+.imgs {
+    width: 20vw;
+}
+
+.gridContainer p {
+    text-align: justify;
+    text-indent: 1rem;;
+}
+
+/*ESTILO PARA EL FOOTER*/
+
+.col-4 {
+    padding: 20px 30px;
+    justify-content: center;
+}
+
+footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid grey;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 25%, rgba(189,189,189,1) 77%);
+    font-size: 0.8vw;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+   /*ESTILO PARA EL CAROUSEL*/
+
+    body {
+        display: grid;
+    }
+
+    #logo {
+        justify-self: center;
+        width: 8rem;
+    }
+
+    .carousel {
+        position: relative;
+        height: 30vh;
+    }
+
+    .carousel .carousel-inner {
+        position: relative;
+        height: 30vh;
+    }
+ 
+    .carousel .carousel-caption {
+        position: absolute;
+    }
+
+    .c-img {
+        object-fit: cover;
+    }
+    
+    .carousel-item  {
+        height: 30vh;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .c-item {
+        width: 480px;
+    }
+
+/* ESTILO DE LAS TARJETAS INFORMATIVAS*/
+
+    [class*="menu-"] {    
+        display: grid;
+        text-align: center;
+        padding: 15px;
+        border: solid grey;
+        border-radius: 20px;
+        width: 90vw;
+    }
+
+    .gridContainer {  
+        display: grid;
+        margin: 1rem ;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "menu-1" 
+            "menu-2" 
+            "menu-3"
+            "menu-4" 
+            "menu-5" 
+            "menu-6";
+    }
+
+    .menu-1 {
+    grid-area: menu-1;
+    }
+
+    .menu-2 {
+    grid-area: menu-2;
+    }
+
+    .menu-3 {
+    grid-area: menu-3;
+    }
+
+    .menu-4 {
+    grid-area: menu-4;
+    }
+
+    .menu-5 {
+    grid-area: menu-5;
+    }
+
+    .menu-6 {
+    grid-area: menu-6;
+    }
+
+    .imgs {
+        width: 80vw;
+    }
+
+    .gridContainer p {
+    text-align: justify;
+    text-indent: .5rem;;
+    }
+ 
+    iframe {
+        height: 17vh;
+    }
+
+    /*ESTILO PARA EL FOOTER*/
+    
+    footer {
+        font-size: 2vw;
+    }
+    
+    .col-4 {
+    padding: 10px 20px;
+    justify-content: center;
+    }
+}
+

@@ -1,0 +1,186 @@
+* {
+    margin: 0; 
+    padding: 0;   
+}
+
+[class*="col-"] {
+    float: left;   
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*ESTILO PARA EL HEADER*/
+header {
+    display: flex;
+}
+.col-7 {
+    display: grid;
+    align-items: center;
+}
+
+#logoClinica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    justify-self: center;
+    width: 16rem;
+}
+
+/*ESTILO DEL H2*/
+
+h2 {
+    padding: 3rem;
+    text-align: center;
+
+}
+
+/*ESTILO PARA EL MAIN*/
+
+.tarjetasDeTurnos { 
+    align-items: center; 
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "menu-1 menu-2"
+      "menu-3 menu-4";
+}
+
+
+.atendido {
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+ul {
+    padding-top: .8rem;
+    list-style-type: none;
+}
+
+[class*="menu-"] {
+    display: grid;
+    float: left;  
+    border: solid grey;
+    border-radius: 20px;
+}
+
+.menu-1 {
+    grid-area: menu-1;
+}
+
+.menu-2 {
+    grid-area: menu-2;
+}
+
+.menu-3 {
+    grid-area: menu-3;
+}
+
+.menu-4 {
+    grid-area: menu-4;
+}
+
+/*ESTILO PARA EL FOOTER*/
+
+.col-4 {
+    padding: 20px 30px;
+    justify-content: center;
+}
+
+footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid grey;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 25%, rgba(189,189,189,1) 77%);
+    font-size: 0.8vw;
+}
+
+@media only screen and (max-width: 767px){
+    
+    #logo {
+        justify-self: center;
+        width: 8rem;
+        }
+    
+    [class*="menu-"] {    
+        display: grid;
+        justify-items: center;
+        padding: 15px;
+        gap: 2rem;
+        border: solid grey;
+        border-radius: 20px;
+        align-items: center;
+        width: 90vw;
+    }
+
+    .tarjetasDeTurnos { 
+        display: grid;
+        align-items: center;
+        margin: 1rem ;
+        font-size: 3.5vw;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "menu-1" 
+            "menu-2" 
+            "menu-3"
+            "menu-4";
+    }
+    
+    .atendido {
+        margin: 10px;
+        width: 65vw;
+        border-radius: 20px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    ul {
+        padding-top: .8rem;
+        list-style-type: none;
+    }
+    
+    .menu-1 {
+        grid-area: menu-1;
+    }
+    
+    .menu-2 {
+        grid-area: menu-2;
+    }
+    
+    .menu-3 {
+        grid-area: menu-3;
+    }
+    
+    .menu-4 {
+        grid-area: menu-4;
+    }
+
+    footer {
+        font-size: 2vw;
+    }
+    
+    .col-4 {
+    padding: 10px 20px;
+    justify-content: center;
+    }
+    
+}

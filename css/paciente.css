@@ -1,0 +1,115 @@
+* {
+    margin: 0; 
+    padding: 0;   
+}
+
+[class*="col-"] {
+    float: left;   
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*ESTILO PARA EL HEADER*/
+header {
+    display: flex;
+}
+.col-7 {
+    display: grid;
+    align-items: center;
+}
+
+#logoClinica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    justify-self: center;
+    width: 16rem;
+}
+
+/*ESTILO PARA EL MENSAJE DE BIENVENIDA*/
+
+#saludo {
+    margin: 0 60px;
+    padding: 20px;
+}
+
+/*ESTILO PARA EL MAIN*/
+
+table {
+    text-align: center;
+}
+
+form {
+    justify-content: center;
+    margin: 2rem 20rem;
+}
+
+.input-group .mb-3 {
+    display: grid;
+}
+
+label {
+    padding-top: 15px;
+}
+
+/*ESTILO PARA EL FOOTER*/
+
+.col-4 {
+    padding: 20px 30px;
+    justify-content: center;
+}
+
+footer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid grey;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 25%, rgba(189,189,189,1) 77%);
+    font-size: 0.8vw;
+}
+
+@media only screen and (max-width: 767px) {
+   /*ESTILO PARA EL CAROUSEL*/
+
+    body {
+        display: grid;
+    }
+
+    #logo {
+        justify-self: center;
+        width: 8rem;
+    }
+
+ 
+    /* ESTILO PARA LA TABLA*/
+
+    .container {
+        width: 90vw
+    }
+
+    form {
+        justify-content: center;
+        margin: 2rem 8rem;
+    }
+
+    /*ESTILO PARA EL FOOTER*/
+    
+    footer {
+        font-size: 2vw;
+    }
+    
+    .col-4 {
+    padding: 10px 20px;
+    justify-content: center;
+    }
+}
+
